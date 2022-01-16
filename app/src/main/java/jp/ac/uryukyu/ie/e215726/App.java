@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) {
         ArrayList<Card> card_list = new ArrayList<Card>();
+        ArrayList<Yaku> yaku_list = new ArrayList<Yaku>();
 
         card_list.add(new Card("01.png","松に鶴",1,"松","光",20));
         card_list.add(new Card("02.png","松に赤短",1,"松","短冊",5));
@@ -57,6 +58,15 @@ public class App {
         card_list.add(new Card("46.png","桐にカス",12,"桐","カス",1));
         card_list.add(new Card("47.png","桐にカス",12,"桐","カス",1));
         card_list.add(new Card("48.png","桐にカス",12,"桐","カス",1));
+
+        yaku_list.add(new Yaku("五光","松に鶴","桜に幕","芒に月","柳に小野道風","桐に鳳凰"));
+        yaku_list.add(new Yaku("四光","松に鶴","桜に幕","柳に小野道風","桐に鳳凰"));
+        yaku_list.add(new Yaku("三光","松に鶴","桜に幕","桐に鳳凰"));
+        yaku_list.add(new Yaku("猪鹿蝶","萩に猪","紅葉に鹿","牡丹に蝶"));
+        yaku_list.add(new Yaku("赤短","松に赤短","梅に赤短","桜に赤短"));
+        yaku_list.add(new Yaku("青短","牡丹に青短","萩に短冊","紅葉に青短"));
+        yaku_list.add(new Yaku("月見で一杯","芒に月","菊に盃"));
+        yaku_list.add(new Yaku("花見で一杯","桜に幕","菊に盃"));
 
         System.out.println(card_list.get(0).getName());
         System.out.println(card_list.get(47).getType());
