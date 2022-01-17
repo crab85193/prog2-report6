@@ -29,6 +29,8 @@ application {
     mainClass = 'jp.ac.uryukyu.ie.e215726.Main'
 }
 
+sourceCompatibility = 10
+
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
