@@ -46,12 +46,11 @@ public class Command {
      */
     public int waitUserCommand(String message){
         int index = 0;
-        System.out.print(message + ": ");
-
         for(var command : commands){
             System.out.println(index + ": " + command);
             index += 1;
         }
+        System.out.print(message + ": ");
         while(true){
             int input = scanner.nextInt();
 
