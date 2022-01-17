@@ -3,7 +3,16 @@
  */
 package jp.ac.uryukyu.ie.e215726;
 
+/**
+ * メインクラス
+ * Created by CrabAnderson on 2022/01/18.
+ */
+
 public class Main {
+    /**
+     * メインメソッド
+     *
+     */
     public static void main(String[] args) {
         GameMaster master = new GameMaster();
         master.init();

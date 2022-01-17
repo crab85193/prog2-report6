@@ -3,10 +3,21 @@ package jp.ac.uryukyu.ie.e215726;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * フィールドクラス
+ *  ArrayList<Card> field; //フィールドにあるカードを記憶するためのリスト
+ *  ArrayList<Card> stack; //山札のカードを記憶するためのリスト
+ * Created by CrabAnderson on 2022/01/18.
+ */
+
 public class Field {
     private ArrayList<Card> field = new ArrayList<Card>();
     private ArrayList<Card> stack = new ArrayList<Card>();
 
+    /**
+     * コンストラクタ
+     *
+     */
     Field(){
         stack.add(new Card("01.png","松に鶴",1,"松","光",20));
         stack.add(new Card("02.png","松に赤短",1,"松","短冊",5));
@@ -58,6 +69,9 @@ public class Field {
         stack.add(new Card("48.png","桐にカス",12,"桐","カス",1));
     }
 
+    /**
+     * フィールドにカードを設定するメソッド
+     */
     public void setFieldCards(){
         Random ra = new Random();
         for(int i=0;i<8;i++){
@@ -67,30 +81,58 @@ public class Field {
         }
     }
 
+    /**
+     * フィールドにカードを追加するメソッド
+     * @param card 追加するカード
+     */
     public void addFieldCard(Card card){
         field.add(card);
     }
 
+    /**
+     * フィールドからカードを削除するメソッド
+     * @param card 削除するカード
+     */
     public void removeFieldCard(Card card){
         field.remove(card);
     }
 
+    /**
+     * フィールドにあるカードを取得するメソッド
+     * @return フィールド上にあるカード
+     */
     public ArrayList<Card> getFieldCards(){
         return field;
     }
 
+    /**
+     * 山札にカードを追加するメソッド
+     * @param card 追加するカード
+     */
     public void addStackCard(Card card){
         stack.add(card);
     }
 
+    /**
+     * 山札からカードを削除するメソッド
+     * @param card 削除するメソッド
+     */
     public void removeStackCard(Card card){
         stack.remove(card);
     }
 
-    public ArrayList<Card> getStackCards(Card card){
+    /**
+     * 山札にあるカードを取得するメソッド
+     * @return 山札にあるカード
+     */
+    public ArrayList<Card> getStackCards(){
         return stack;
     }
 
+    /**
+     * 山札からカードを１枚引くメソッド
+     * @return 引いたカード
+     */
     public Card draw(){
         Random ra = new Random();
         int selector = ra.nextInt(field.size());

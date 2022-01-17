@@ -3,6 +3,12 @@ package jp.ac.uryukyu.ie.e215726;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * コマンドクラス
+ *  ArrayList<String> commands; //コマンドを追加するリスト
+ *  Scanner scanner; //ユーザがコマンドを入力する際に使用するインスタンス
+ * Created by CrabAnderson on 2022/01/18.
+ */
 public class Command {
     private ArrayList<String> commands;
     private Scanner scanner;

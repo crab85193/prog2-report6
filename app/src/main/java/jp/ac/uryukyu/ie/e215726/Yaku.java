@@ -2,6 +2,18 @@ package jp.ac.uryukyu.ie.e215726;
 
 import java.util.ArrayList;
 
+/**
+ * 役クラス
+ *  String yakuName; //役の名前
+ *  String card1; //役構成に必要なカード１枚目
+ *  String card2; //役構成に必要なカード２枚目
+ *  String card3; //役構成に必要なカード３枚目
+ *  String card4; //役構成に必要なカード４枚目
+ *  String card5; //役構成に必要なカード５枚目
+ *  ArrayList<String> card_list; //役構成に必要なカードを記憶するリスト
+ * Created by CrabAnderson on 2022/01/18.
+ */
+
 public class Yaku {
     private String yakuName;
     private String card1;

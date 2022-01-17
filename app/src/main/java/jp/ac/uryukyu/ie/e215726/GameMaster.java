@@ -2,6 +2,16 @@ package jp.ac.uryukyu.ie.e215726;
 
 import java.util.ArrayList;
 
+/**
+ * ゲームマスタークラス
+ *  ArrayList<Player> players; //ゲームをプレイするプレイヤー情報を複数記憶するリスト
+ *  ArrayList<Yaku> yaku_list; //役情報を記憶するリスト
+ *  Field field; //フィールドクラスのインスタンス
+ *  Command command; //コマンドクラスのインスタンス
+ *  boolean isGameEnd; //ゲームの終了判定。true=終了。
+ * Created by CrabAnderson on 2022/01/18.
+ */
+
 public class GameMaster {
     private ArrayList<Player> players;
     private ArrayList<Yaku> yaku_list;

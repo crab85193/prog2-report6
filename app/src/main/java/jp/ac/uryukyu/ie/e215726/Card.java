@@ -1,5 +1,15 @@
 package jp.ac.uryukyu.ie.e215726;
 
+/**
+ * 札クラス
+ *  String img; //札の画像名
+ *  String name; //札の名前
+ *  int month; //札の月
+ *  String flower; //札の花名
+ *  String type; //札の種類
+ *  int score; //札単体の点数
+ * Created by CrabAnderson on 2022/01/18.
+ */
 public class Card {
     private String img;
     private String name;
@@ -28,7 +38,7 @@ public class Card {
     }
 
     /**
-     * img（札の画像名）を返すメソッド
+     * 札の画像名を返すメソッド
      * @return 画像名
      */
     public String getImgName(){
@@ -36,7 +46,7 @@ public class Card {
     }
 
     /**
-     * name（札の名前）を返すメソッド
+     * 札の名前を返すメソッド
      * @return 札名
      */
     public String getName(){
@@ -44,7 +54,7 @@ public class Card {
     }
 
     /**
-     * month（札の月）を返すメソッド
+     * 札の月を返すメソッド
      * @return 札の月
      */
     public int getMonth(){
@@ -52,7 +62,7 @@ public class Card {
     }
 
     /**
-     * flower（札の花名）を返すメソッド
+     * 札の花名を返すメソッド
      * @return 札の花名
      */
     public String getFlower(){
@@ -60,7 +70,7 @@ public class Card {
     }
 
     /**
-     * type（札の種類）を返すメソッド
+     * 札の種類を返すメソッド
      * @return 札の種類
      */
     public String getType(){
@@ -68,7 +78,7 @@ public class Card {
     }
 
     /**
-     * score（札の点数）を返すメソッド
+     * 札の点数を返すメソッド
      * @return 札の点数
      */
     public int getScore(){
@@ -76,7 +86,7 @@ public class Card {
     }
 
     /**
-     * img（札の画像名）を設定するメソッド
+     * 札の画像名を設定するメソッド
      * @param _img 画像名
      */
     public void setImgName(String _img){
@@ -84,7 +94,7 @@ public class Card {
     }
 
     /**
-     * name（札の名前）を設定するメソッド
+     * 札の名前を設定するメソッド
      * @param _name 札名
      */
     public void setName(String _name){
@@ -92,7 +102,7 @@ public class Card {
     }
 
     /**
-     * month（札の月）を設定するメソッド
+     * 札の月を設定するメソッド
      * @param _month 札の月
      */
     public void setMonth(int _month){
@@ -100,7 +110,7 @@ public class Card {
     }
 
     /**
-     * flower（札の花名）を設定するメソッド
+     * 札の花名を設定するメソッド
      * @param _flower 札の花名
      */
     public void setFlower(String _flower){
@@ -108,7 +118,7 @@ public class Card {
     }
 
     /**
-     * type（札の種類）を設定するメソッド
+     * 札の種類を設定するメソッド
      * @param _type 札の種類
      */
     public void setType(String _type){
@@ -116,7 +126,7 @@ public class Card {
     }
 
     /**
-     * score（札の点数）を設定するメソッド
+     * 札の点数を設定するメソッド
      * @param _score 札の点数
      */
     public void setScore(int _score){

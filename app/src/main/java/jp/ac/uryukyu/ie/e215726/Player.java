@@ -2,6 +2,14 @@ package jp.ac.uryukyu.ie.e215726;
 
 import java.util.ArrayList;
 
+/**
+ * プレイヤークラス
+ *  String name; //プレイヤー名
+ *  ArrayList<Card> hand; //手札
+ *  ArrayList<Card> take; //取札
+ * Created by CrabAnderson on 2022/01/18.
+ */
+
 public class Player {
     private String name;
     private ArrayList<Card> hand = new ArrayList<Card>();
