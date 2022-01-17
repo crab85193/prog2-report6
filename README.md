@@ -1,4 +1,4 @@
-# Programming2 Report4
+# Programming2 Report6
 
 ![GitHub watchers](https://img.shields.io/github/watchers/crab85193/prog2_report6?style=social)
 ![Gradle](https://img.shields.io/badge/Gradle-v7.3.2-02303A?logo=Gradle&style=popout)
