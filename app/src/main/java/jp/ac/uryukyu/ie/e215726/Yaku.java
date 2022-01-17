@@ -90,11 +90,7 @@ public class Yaku {
      * @return 役構成に必要なカード情報
      */
     public ArrayList<String> getCardInformation(){
-        int i = 0;
-        for(String card:card_list){
-            if(card == "undefined") card_list.remove(i);
-            i++;
-        }
+        card_list.remove("undefined");
         return card_list;
     }
 
