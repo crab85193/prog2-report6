@@ -58,10 +58,10 @@ public class Field {
         stack.add(new Card("48.png","桐にカス",12,"桐","カス",1));
     }
 
-    public void init(){
+    public void setFieldCards(){
         Random ra = new Random();
-        for(int i=1;i>=8;i++){
-            int selector = ra.nextInt(stack.size()+1);
+        for(int i=0;i<8;i++){
+            int selector = ra.nextInt(stack.size());
             field.add(stack.get(selector));
             stack.remove(selector);
         }
@@ -93,7 +93,7 @@ public class Field {
 
     public Card draw(){
         Random ra = new Random();
-        int selector = ra.nextInt(field.size()+1);
+        int selector = ra.nextInt(field.size());
         Card select_card = stack.get(selector);
         stack.remove(selector);
 
