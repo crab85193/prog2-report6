@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 /**
  * ゲームマスタークラス
- *  ArrayList<Player> players; //ゲームをプレイするプレイヤー情報を複数記憶するリスト
- *  ArrayList<Yaku> yaku_list; //役情報を記憶するリスト
+ *  ArrayList players; //ゲームをプレイするプレイヤー情報を複数記憶するリスト
+ *  ArrayList yaku_list; //役情報を記憶するリスト
  *  Field field; //フィールドクラスのインスタンス
  *  Command command; //コマンドクラスのインスタンス
  *  boolean isGameEnd; //ゲームの終了判定。true=終了。
@@ -19,6 +19,10 @@ public class GameMaster {
     private Command command;
     private boolean isGameEnd;
 
+    /**
+     * コンストラクタ
+     *
+     */
     GameMaster(){
         players = new ArrayList<Player>();
         yaku_list = new ArrayList<Yaku>();
@@ -39,6 +43,9 @@ public class GameMaster {
         yaku_list.add(new Yaku("花見で一杯","桜に幕","菊に盃"));
     }
 
+    /**
+     * 初期化する
+     */
     public void init(){
         field.setFieldCards();
         for(var player : players){
@@ -48,6 +55,9 @@ public class GameMaster {
         }
     }
 
+    /**
+     * ゲームを開始する
+     */
     public void start(){
         while(!isGameEnd){
             for(var player : players){
@@ -110,6 +120,9 @@ public class GameMaster {
         }
     }
 
+    /**
+     * フィールド上の札を表示する
+     */
     public void showFieldCards(){
         System.out.println("-- 場の札 --");
         for(var fieldCard : field.getFieldCards()){
@@ -118,6 +131,10 @@ public class GameMaster {
         System.out.println();
     }
 
+    /**
+     * 手札を表示する
+     * @param player 表示する手札を持っているプレイヤー
+     */
     public void showHandCards(Player player){
         System.out.println("-- " + player.getName() + "の手札 --");
         for(var card : player.getHandCard()){
@@ -126,6 +143,10 @@ public class GameMaster {
         System.out.println();
     }
 
+    /**
+     * 取札を表示する
+     * @param player 表示する取札を持っているプレイヤー
+     */
     public void showTakeCards(Player player){
         System.out.println("-- " + player.getName() + "の取札 --");
         for(var card : player.getTakeCard()){
@@ -134,6 +155,10 @@ public class GameMaster {
         System.out.println();
     }
 
+    /**
+     * 役ができているか調べる
+     * @param player 調べるプレイヤー
+     */
     public void checkYaku(Player player){
         // ArrayList<Yaku> acquisitionYaku = new ArrayList<Yaku>();
         int kasu = 0;
@@ -162,6 +187,11 @@ public class GameMaster {
         if(tane>=5){ System.out.println("タネ" + String.valueOf(tane-4) + "文"); }
     }
 
+    /**
+     * フィールドのカードを取得できるか調べる
+     * @param player 対象プレイヤー
+     * @return 取得できるか否か
+     */
     public boolean checkDuplicateMonth(Player player){
         for(var field_card : field.getFieldCards()){
             for(var hand_card : player.getHandCard()){
@@ -171,6 +201,11 @@ public class GameMaster {
         return false;
     }
 
+    /**
+     * フィールドのカードを取得できるか調べる
+     * @param card 調べるカード
+     * @return 取得できるか否か
+     */
     public boolean checkDuplicateMonth(Card card){
         for(var field_card : field.getFieldCards()){
             if(field_card.getMonth() == card.getMonth()) return true;
@@ -178,6 +213,11 @@ public class GameMaster {
         return false;
     }
 
+    /**
+     * フィールド上のカードを選択する
+     * @param fealdCards フィールド上のカード
+     * @return 選択したフィールド上のカード番号
+     */
     public int selectFieldCards(ArrayList<Card> fealdCards){
         command.clearCommand();
 
@@ -192,6 +232,11 @@ public class GameMaster {
         return fieldCards_number;
     }
 
+    /**
+     * 手札のカードを選択する
+     * @param handCards 手札のカード
+     * @return 選択した手札のカード番号
+     */
     public int selectHandCards(ArrayList<Card> handCards){
         command.clearCommand();
 

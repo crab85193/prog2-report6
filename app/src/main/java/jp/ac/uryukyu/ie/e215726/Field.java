@@ -5,8 +5,8 @@ import java.util.Random;
 
 /**
  * フィールドクラス
- *  ArrayList<Card> field; //フィールドにあるカードを記憶するためのリスト
- *  ArrayList<Card> stack; //山札のカードを記憶するためのリスト
+ *  ArrayList field; //フィールドにあるカードを記憶するためのリスト
+ *  ArrayList stack; //山札のカードを記憶するためのリスト
  * Created by CrabAnderson on 2022/01/18.
  */
 

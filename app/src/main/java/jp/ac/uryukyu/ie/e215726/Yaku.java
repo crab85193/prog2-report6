@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *  String card3; //役構成に必要なカード３枚目
  *  String card4; //役構成に必要なカード４枚目
  *  String card5; //役構成に必要なカード５枚目
- *  ArrayList<String> card_list; //役構成に必要なカードを記憶するリスト
+ *  ArrayList card_list; //役構成に必要なカードを記憶するリスト
  * Created by CrabAnderson on 2022/01/18.
  */
 

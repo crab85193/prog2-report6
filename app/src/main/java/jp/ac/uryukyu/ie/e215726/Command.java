@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * コマンドクラス
- *  ArrayList<String> commands; //コマンドを追加するリスト
+ *  ArrayList commands; //コマンドを追加するリスト
  *  Scanner scanner; //ユーザがコマンドを入力する際に使用するインスタンス
  * Created by CrabAnderson on 2022/01/18.
  */
