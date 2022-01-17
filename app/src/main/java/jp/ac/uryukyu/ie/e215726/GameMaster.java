@@ -215,14 +215,14 @@ public class GameMaster {
 
     /**
      * フィールド上のカードを選択する
-     * @param fealdCards フィールド上のカード
+     * @param fieldCards フィールド上のカード
      * @return 選択したフィールド上のカード番号
      */
-    public int selectFieldCards(ArrayList<Card> fealdCards){
+    public int selectFieldCards(ArrayList<Card> fieldCards){
         command.clearCommand();
 
         System.out.println("-- 場の札 --");
-        for(var fieldCard : fealdCards){
+        for(var fieldCard : fieldCards){
             command.addCommand(fieldCard.getName() + ": " + fieldCard.getMonth() + "月の" + fieldCard.getType() + "札");
         }
         command.addCommand("カードを取らない");
