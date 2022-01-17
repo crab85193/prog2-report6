@@ -64,28 +64,7 @@ public class GameMaster {
                 if(player.getName() != "CPU"){
                     showHandCards(player);
 
-                    while(true){
-                        int fieldCards_number = selectFieldCards(field.getFieldCards());
-                        int handCards_number = selectHandCards(player.getHandCard());
-
-                        if(field.getFieldCards().size() <= fieldCards_number){
-                            if(checkDuplicateMonth(player)){
-                                System.out.println("同じ月のカードが場に出ているので出せません。取ってください。");
-                            }else{
-                                field.addFieldCard(player.getHandCard().get(handCards_number));
-                                player.removeHandCard(player.getHandCard().get(handCards_number));
-                                break;
-                            }
-                        }else if(field.getFieldCards().get(fieldCards_number).getMonth() == player.getHandCard().get(handCards_number).getMonth()){
-                            player.addTakeCard(player.getHandCard().get(handCards_number));
-                            player.addTakeCard(field.getFieldCards().get(fieldCards_number));
-                            player.removeHandCard(player.getHandCard().get(handCards_number));
-                            field.removeFieldCard(field.getFieldCards().get(fieldCards_number));
-                            break;
-                        }else{
-                            System.out.println("月が違うので取れません");
-                        }
-                    }
+                    turn(player);
 
                     System.out.println("山札からカードを引きます");
                     var drawCard = field.draw();
@@ -116,6 +95,35 @@ public class GameMaster {
                 }
                 showTakeCards(player);
                 checkYaku(player);
+            }
+        }
+    }
+
+    /**
+     * ターンを実行する
+     * @param player 実行するプレイヤー
+     */
+    public void turn(Player player){
+        while(true){
+            int fieldCards_number = selectFieldCards(field.getFieldCards());
+            int handCards_number = selectHandCards(player.getHandCard());
+
+            if(field.getFieldCards().size() <= fieldCards_number){
+                if(checkDuplicateMonth(player)){
+                    System.out.println("同じ月のカードが場に出ているので出せません。取ってください。");
+                }else{
+                    field.addFieldCard(player.getHandCard().get(handCards_number));
+                    player.removeHandCard(player.getHandCard().get(handCards_number));
+                    break;
+                }
+            }else if(field.getFieldCards().get(fieldCards_number).getMonth() == player.getHandCard().get(handCards_number).getMonth()){
+                player.addTakeCard(player.getHandCard().get(handCards_number));
+                player.addTakeCard(field.getFieldCards().get(fieldCards_number));
+                player.removeHandCard(player.getHandCard().get(handCards_number));
+                field.removeFieldCard(field.getFieldCards().get(fieldCards_number));
+                break;
+            }else{
+                System.out.println("月が違うので取れません");
             }
         }
     }
