@@ -30,8 +30,8 @@ public class GameMaster {
         command = new Command();
         isGameEnd = false;
 
-        players.add(new Player("Player"));
-        players.add(new Player("CPU"));
+        players.add(new Player("Player1"));
+        players.add(new Player("Player2"));
 
         yaku_list.add(new Yaku("五光","松に鶴","桜に幕","芒に月","柳に小野道風","桐に鳳凰"));
         yaku_list.add(new Yaku("四光","松に鶴","桜に幕","柳に小野道風","桐に鳳凰"));
@@ -90,6 +90,13 @@ public class GameMaster {
                             System.out.println("月が違うので取れません");
                         }
                     }
+                    if(checkYaku(player).size() > 0){
+                        for(var yaku : checkYaku(player)){
+                            System.out.println(yaku);
+                        }
+                        isGameEnd = true;
+                    }
+
                 }else{
 
                 }
@@ -167,8 +174,9 @@ public class GameMaster {
      * 役ができているか調べる
      * @param player 調べるプレイヤー
      */
-    public void checkYaku(Player player){
+    public ArrayList<String> checkYaku(Player player){
         // ArrayList<Yaku> acquisitionYaku = new ArrayList<Yaku>();
+        ArrayList<String> result = new ArrayList<String>();
         int kasu = 0;
         int tan = 0;
         int tane = 0;
@@ -181,7 +189,8 @@ public class GameMaster {
                 }
             }
             if(yaku.getCardInformation().size() == i){
-                System.out.println(yaku.getYakuName());
+                // System.out.println(yaku.getYakuName());
+                result.add(yaku.getYakuName());
             }
         }
 
@@ -190,9 +199,14 @@ public class GameMaster {
             else if(take.getType() == "札") tan++;
             else if(take.getType() == "種") tane++;
         }
-        if(kasu>=10){ System.out.println("カス" + String.valueOf(kasu-9) + "文"); }
-        if(tan>=5){ System.out.println("タン" + String.valueOf(tan-4) + "文"); }
-        if(tane>=5){ System.out.println("タネ" + String.valueOf(tane-4) + "文"); }
+        // if(kasu>=10){ System.out.println("カス" + String.valueOf(kasu-9) + "文"); }
+        // if(tan>=5){ System.out.println("タン" + String.valueOf(tan-4) + "文"); }
+        // if(tane>=5){ System.out.println("タネ" + String.valueOf(tane-4) + "文"); }
+        if(kasu>=10){ result.add("カス" + String.valueOf(kasu-9) + "文"); }
+        if(tan>=5){ result.add("タン" + String.valueOf(tan-4) + "文"); }
+        if(tane>=5){ result.add("タネ" + String.valueOf(tane-4) + "文"); }
+
+        return result;
     }
 
     /**
