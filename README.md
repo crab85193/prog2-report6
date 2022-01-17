@@ -14,7 +14,7 @@
 「花札こいこい」ゲームをJavaで開発するリポジトリです。（未完成）
 既存の花札のルールと同様に手札８枚から開始し、先に役を完成させたプレイヤーが勝ちとなります。
 
-課題のページ -> [https://github.com/naltoma/java_intro2020/blob/master/report/report6_final.md#report](https://github.com/naltoma/java_intro2020/blob/master/report/report6_final.md#report)
+課題のページ -> [https://github.com/naltoma/java_intro2020/blob/master/report/report6_final.md](https://github.com/naltoma/java_intro2020/blob/master/report/report6_final.md)
 
 花札のルール -> [https://www.nintendo.co.jp/others/hanafuda_kabufuda/howtoplay/index.html](https://www.nintendo.co.jp/others/hanafuda_kabufuda/howtoplay/index.html)
 
