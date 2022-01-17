@@ -61,6 +61,7 @@ public class GameMaster {
     public void start(){
         while(!isGameEnd){
             for(var player : players){
+                System.out.println("< " + player.getName() + " >のターン");
                 if(player.getName() != "CPU"){
                     showHandCards(player);
 
